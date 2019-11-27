@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:id="@+id/rootLayout"
+    tools:context=".MainActivity">
+
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spnSehirler"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="16dp"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+
+    <TextView
+        android:id="@+id/tvTarih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="TARİH"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spnSehirler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spnSehirler" />
+
+    <TextView
+        android:id="@+id/tvSicaklik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="84dp"
+        android:text="41"
+        android:textSize="60sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTarih" />
+
+    <TextView
+        android:id="@+id/tvDerece"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="°C"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/tvSicaklik"
+        app:layout_constraintTop_toTopOf="@+id/tvSicaklik" />
+
+    <ImageView
+        android:id="@+id/imgHavaDurumu"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSicaklik"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvSicaklik"
+        app:srcCompat="@drawable/icon_01" />
+
+    <TextView
+        android:id="@+id/tvAciklama"
+        android:layout_width="121dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Güneşli"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgHavaDurumu"
+        app:layout_constraintStart_toStartOf="@+id/imgHavaDurumu"
+        app:layout_constraintTop_toBottomOf="@+id/imgHavaDurumu" />
+</android.support.constraint.ConstraintLayout>
